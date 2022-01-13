@@ -13,22 +13,26 @@ public class BallMovement : MonoBehaviour
     {
         rb.AddForce(0, 0, forwardForce * Time.deltaTime);
 
-        if (Input.GetKey("d"))
+        if (Input.GetKey("w") || Input.GetKey("up"))
+        {
+            rb.AddForce(0, 0, forwardForce * Time.deltaTime);
+        }
+        if (Input.GetKey("d") || Input.GetKey("right"))
         {
             rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
-        if (Input.GetKey("a"))
+        if (Input.GetKey("a") || Input.GetKey("left"))
         {
             rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
-        if (ballIsOnTheGround && Input.GetKey("w"))
+        if (ballIsOnTheGround && Input.GetKey("space"))
         {
             rb.AddForce(0, jumpForce * Time.deltaTime, 0, ForceMode.VelocityChange);
             Debug.Log("Jump");
             ballIsOnTheGround = false;
         };
 
-        if (Input.GetKey("s"))
+        if (Input.GetKey("s") || Input.GetKey("down"))
         {
             rb.AddForce(0, 0, -1000 * Time.deltaTime);
         }
