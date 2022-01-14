@@ -8716,9 +8716,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 837202947, guid: c2c2dd6b6e8fc40a595fcdfcecb29221, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -425.00006
+      objectReference: {fileID: 0}
+    - target: {fileID: 837202947, guid: c2c2dd6b6e8fc40a595fcdfcecb29221, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -245
+      objectReference: {fileID: 0}
     - target: {fileID: 2572441758303832467, guid: c2c2dd6b6e8fc40a595fcdfcecb29221, type: 3}
       propertyPath: m_Name
       value: Stop Watch
+      objectReference: {fileID: 0}
+    - target: {fileID: 2572441758303832478, guid: c2c2dd6b6e8fc40a595fcdfcecb29221, type: 3}
+      propertyPath: RtTimer
+      value: 
+      objectReference: {fileID: 2572441758656714234}
+    - target: {fileID: 2572441758303832478, guid: c2c2dd6b6e8fc40a595fcdfcecb29221, type: 3}
+      propertyPath: savedTimer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2572441758303832479, guid: c2c2dd6b6e8fc40a595fcdfcecb29221, type: 3}
       propertyPath: m_Pivot.x
@@ -8806,6 +8822,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c2dd6b6e8fc40a595fcdfcecb29221, type: 3}
+--- !u!1 &2572441758656714230 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 837202944, guid: c2c2dd6b6e8fc40a595fcdfcecb29221, type: 3}
+  m_PrefabInstance: {fileID: 2572441758656714229}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2572441758656714231
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2572441758656714230}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 42bf538341e5c496e9a913ac8d41b2f8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!224 &2572441758656714234 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 837202947, guid: c2c2dd6b6e8fc40a595fcdfcecb29221, type: 3}
+  m_PrefabInstance: {fileID: 2572441758656714229}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3593423263315563958
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16639,6 +16685,10 @@ PrefabInstance:
     - target: {fileID: 5521917341839975687, guid: 2dd7de544e2ec4993829c88353ddee86, type: 3}
       propertyPath: m_Name
       value: Background Audio
+      objectReference: {fileID: 0}
+    - target: {fileID: 5521917341839975687, guid: 2dd7de544e2ec4993829c88353ddee86, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5521917341839975737, guid: 2dd7de544e2ec4993829c88353ddee86, type: 3}
       propertyPath: m_RootOrder

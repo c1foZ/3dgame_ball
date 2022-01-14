@@ -1,18 +1,22 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class StopWatch : MonoBehaviour
 {
     static StopWatch timer = null;
-    public Text TimerText;
+    public TextMeshProUGUI TimerText;
+    public RectTransform RtTimer;
+    public float SavedTimer;
     public bool playing;
     private float Timer;
     float currentTime; // your current timer (without logic)
-    float highscore = 99999; // set it to a really high value by default
-    void start()
-    {
-        highscore = PlayerPrefs.GetFloat("best"); // get your previous highscore
-    }
+    // float highscore = 99999; // set it to a really high value by default
+    // void start()
+    // {
+    //     highscore = PlayerPrefs.GetFloat("best"); // get your previous highscore
+    // }
     // //on level completed:
     // {
     //     if(currentTime <= highscore //your best time
@@ -22,8 +26,9 @@ public class StopWatch : MonoBehaviour
     //     }
     // }
 
-    void Awake()
+    void Start()
     {
+
         if (timer != null)
         {
             Destroy(gameObject);
@@ -33,13 +38,25 @@ public class StopWatch : MonoBehaviour
             timer = this;
             GameObject.DontDestroyOnLoad(gameObject);
         }
+
+
+
     }
     void Update()
     {
-
         if (playing == true)
         {
+            if (SceneManager.GetActiveScene().name == "Show_Time")
+            {
+                playing = false;
+                Debug.Log("Time stopped");
+                // savedTimer = Timer;
+                Debug.Log(Timer);
+                Debug.Log(TimerText.text);
+                RtTimer.offsetMin = new Vector2(0, 0);
+                RtTimer.offsetMax = new Vector2(0, 0);
 
+            }
             Timer += Time.deltaTime;
             int minutes = Mathf.FloorToInt(Timer / 60F);
             int seconds = Mathf.FloorToInt(Timer % 60F);
