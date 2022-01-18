@@ -11,13 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/01.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/02.unity
     guid: b1a84921b951748659df25d2d029dd3e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/03.unity
     guid: 295405f81900d4e9cbcce736fbbf80a4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/04.unity
     guid: f6a30942118db4a37876bcc499544a6f
   - enabled: 0
@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Show_Time.unity
     guid: 6f662d729fc684e22a5ba4b7a42edb71
+  - enabled: 0
+    path: Assets/Scenes/Insert_Name.unity
+    guid: a4b1ca4655f1c459a9fc6fcb84c5ad2d
   - enabled: 0
     path: Assets/Scenes/Scoreboard.unity
     guid: ef63e3f7868994665b07be89fffbec7c

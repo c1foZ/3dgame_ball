@@ -10,7 +10,7 @@ public class StopWatch : MonoBehaviour
     public RectTransform RtTimer;
     public float SavedTimer;
     public bool playing;
-    private float Timer;
+    public float Timer;
     float currentTime; // your current timer (without logic)
     // float highscore = 99999; // set it to a really high value by default
     // void start()
@@ -46,7 +46,7 @@ public class StopWatch : MonoBehaviour
     {
         if (playing == true)
         {
-            if (SceneManager.GetActiveScene().name == "Show_Time")
+            if (SceneManager.GetActiveScene().name == "Scoreboard")
             {
                 playing = false;
                 Debug.Log("Time stopped");

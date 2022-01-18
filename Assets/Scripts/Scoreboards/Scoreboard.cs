@@ -3,26 +3,39 @@ using System.Collections.Generic;
 using System;
 using System.IO;
 using UnityEngine;
+using TMPro;
 
 public class Scoreboard : MonoBehaviour
 {
     [SerializeField] private int maxScoreboardEntries = 5;
-    [SerializeField] private Transform highscoresHolderTransform = null;
-    [SerializeField] private GameObject scoreboardEntryObject = null;
+    [SerializeField] private Transform highscoresHolderTransform;
+    [SerializeField] private GameObject scoreboardEntryObject;
 
     [Header("Test")]
     [SerializeField] private string testEntryName = "New Name";
-    [SerializeField] private int testEntryScore = 0;
+    [SerializeField] private float testEntryScore = 5000;
+
+    public string theName;
+    public GameObject inputField;
 
     private string SavePath => $"./highscores.json";
 
     private void Start()
     {
+
         ScoreboardSaveData savedScores = GetSavedScores();
 
         UpdateUI(savedScores);
 
         SaveScores(savedScores);
+    }
+    public void StoreName()
+    {
+        theName = inputField.GetComponent<TextMeshProUGUI>().text;
+        Debug.Log(theName);
+        testEntryName = theName;
+        testEntryScore = FindObjectOfType<StopWatch>().Timer;
+
     }
 
     [ContextMenu("Add Test Entry")]
@@ -44,7 +57,7 @@ public class Scoreboard : MonoBehaviour
         //Check if the score is high enough to be added.
         for (int i = 0; i < savedScores.highscores.Count; i++)
         {
-            if (testEntryScore > savedScores.highscores[i].entryScore)
+            if (testEntryScore < savedScores.highscores[i].entryScore)
             {
                 savedScores.highscores.Insert(i, scoreboardEntryData);
                 scoreAdded = true;

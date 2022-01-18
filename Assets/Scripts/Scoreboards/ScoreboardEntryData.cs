@@ -1,9 +1,11 @@
 using System;
+using UnityEngine;
+using TMPro;
+
 
 [Serializable]
-public struct ScoreboardEntryData
+public class ScoreboardEntryData
 {
     public string entryName;
-    public int entryScore;
-
+    public float entryScore;
 }
