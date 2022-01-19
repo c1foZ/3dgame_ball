@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3256901900843864250}
   - component: {fileID: 3186748669119800307}
   m_Layer: 5
-  m_Name: Image_Background_Name
+  m_Name: ImageBackgroundName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 5723365204618943155}
   - component: {fileID: 6678815574772931462}
   m_Layer: 5
-  m_Name: Image_Background_Score
+  m_Name: ImageBackgroundScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 3930998738730968755}
   - component: {fileID: 4357573471225246464}
   m_Layer: 5
-  m_Name: Entry_Highscore
+  m_Name: EntryHighscore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: 1550103401400461637}
   - component: {fileID: 1015175746690662183}
   m_Layer: 5
-  m_Name: Text_Score
+  m_Name: TextScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -394,7 +394,7 @@ GameObject:
   - component: {fileID: 8103173465735037337}
   - component: {fileID: 4507120787980905623}
   m_Layer: 5
-  m_Name: Text_Name
+  m_Name: TextName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

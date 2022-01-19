@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1736830904308668006}
   - component: {fileID: 1736830904308668001}
   m_Layer: 0
-  m_Name: Hide Mouse Cursor
+  m_Name: HideMouseCursor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

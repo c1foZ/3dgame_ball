@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 536859590}
   - component: {fileID: 536859589}
   m_Layer: 5
-  m_Name: Holder_Highscores
+  m_Name: HolderHighscores
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 813076455}
   - component: {fileID: 813076454}
   m_Layer: 5
-  m_Name: Canvas_Scoreboard
+  m_Name: CanvasScoreboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 870183601607041834}
   - component: {fileID: 5144338367766378173}
   m_Layer: 5
-  m_Name: System_Scoreboard
+  m_Name: SystemScoreboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -234,3 +234,5 @@ MonoBehaviour:
   scoreboardEntryObject: {fileID: 0}
   testEntryName: Luke
   testEntryScore: 100
+  theName: 
+  inputField: {fileID: 0}

@@ -9,16 +9,16 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 0bbbed62cac9a4e51afafb59c530ceb3
   - enabled: 1
-    path: Assets/Scenes/01.unity
+    path: Assets/Scenes/1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/Scenes/02.unity
+  - enabled: 0
+    path: Assets/Scenes/2.unity
     guid: b1a84921b951748659df25d2d029dd3e
-  - enabled: 1
-    path: Assets/Scenes/03.unity
+  - enabled: 0
+    path: Assets/Scenes/3.unity
     guid: 295405f81900d4e9cbcce736fbbf80a4
-  - enabled: 1
-    path: Assets/Scenes/04.unity
+  - enabled: 0
+    path: Assets/Scenes/4.unity
     guid: f6a30942118db4a37876bcc499544a6f
   - enabled: 1
     path: Assets/Scenes/Scoreboard.unity

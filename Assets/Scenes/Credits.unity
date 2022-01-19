@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 331533452}
   - component: {fileID: 331533451}
   m_Layer: 5
-  m_Name: Restart Button
+  m_Name: RestartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -460,7 +460,7 @@ GameObject:
   - component: {fileID: 790396488}
   - component: {fileID: 790396487}
   m_Layer: 5
-  m_Name: Start
+  m_Name: TextRestart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -594,7 +594,7 @@ GameObject:
   - component: {fileID: 808188447}
   - component: {fileID: 808188446}
   m_Layer: 0
-  m_Name: Hide_Cursor
+  m_Name: HideCursor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -746,7 +746,7 @@ GameObject:
   - component: {fileID: 1548336952}
   - component: {fileID: 1548336951}
   m_Layer: 5
-  m_Name: Quit Button
+  m_Name: QuitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -975,7 +975,7 @@ GameObject:
   - component: {fileID: 1854210192}
   - component: {fileID: 1854210191}
   m_Layer: 5
-  m_Name: Quit
+  m_Name: TextQuit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

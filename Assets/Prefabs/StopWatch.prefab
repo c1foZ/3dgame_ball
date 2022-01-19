@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 837202947}
   - component: {fileID: 837202946}
   - component: {fileID: 837202945}
+  - component: {fileID: 2572441758656714231}
   m_Layer: 5
-  m_Name: Text_Stopwatch
+  m_Name: TextStopwatch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93,7 +94,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 52.1
+  m_fontSize: 38.95
   m_fontSizeBase: 219.75
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -135,6 +136,26 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!95 &2572441758656714231
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837202944}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 42bf538341e5c496e9a913ac8d41b2f8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2572441758303832467
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,7 +170,7 @@ GameObject:
   - component: {fileID: 2572441758303832466}
   - component: {fileID: 2572441758303832478}
   m_Layer: 5
-  m_Name: Stop Watch
+  m_Name: StopWatch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -250,5 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimerText: {fileID: 837202945}
-  savedTimer: 0
+  RtTimer: {fileID: 837202947}
+  SavedTimer: 0
   playing: 1
+  Timer: 0

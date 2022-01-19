@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System;
 using System.IO;
 using UnityEngine;
 using TMPro;
@@ -11,14 +8,9 @@ public class Scoreboard : MonoBehaviour
     [SerializeField] private Transform highscoresHolderTransform;
     [SerializeField] private GameObject scoreboardEntryObject;
 
-    [Header("Test")]
-    [SerializeField] private string testEntryName = "New Name";
-    [SerializeField] private float testEntryScore = 5000;
-
-    public string theName;
     public GameObject inputField;
 
-    private string SavePath => $"./highscores.json";
+    private string SavePath => "./highscores.json";
 
     private void Start()
     {
@@ -29,49 +21,43 @@ public class Scoreboard : MonoBehaviour
 
         SaveScores(savedScores);
     }
-    public void StoreName()
+    public void StoreNameAndScore()
     {
-        theName = inputField.GetComponent<TextMeshProUGUI>().text;
-        Debug.Log(theName);
-        testEntryName = theName;
-        testEntryScore = FindObjectOfType<StopWatch>().Timer;
-
-    }
-
-    [ContextMenu("Add Test Entry")]
-    public void AddTestEntry()
-    {
+        var userScore = FindObjectOfType<StopWatch>().Timer;
         AddEntry(new ScoreboardEntryData()
         {
-            entryName = testEntryName,
-            entryScore = testEntryScore
+            entryName = inputField.GetComponent<TextMeshProUGUI>().text,
+            entryScore = userScore
         });
+
     }
 
     public void AddEntry(ScoreboardEntryData scoreboardEntryData)
     {
         ScoreboardSaveData savedScores = GetSavedScores();
 
-        bool scoreAdded = false;
-
-        //Check if the score is high enough to be added.
-        for (int i = 0; i < savedScores.highscores.Count; i++)
+        var index = savedScores.highscores
+            .FindIndex((hs) => hs.entryScore > scoreboardEntryData.entryScore);
+        var isScoreAdded = index != -1;
+        if (isScoreAdded)
         {
-            if (testEntryScore < savedScores.highscores[i].entryScore)
-            {
-                savedScores.highscores.Insert(i, scoreboardEntryData);
-                scoreAdded = true;
-                break;
-            }
+            savedScores.highscores.Insert(index, scoreboardEntryData);
         }
+        // for (int i = 0; i < savedScores.highscores.Count; i++)
+        // {
+        //     if (theScore < savedScores.highscores[i].entryScore)
+        //     {
+        //         savedScores.highscores.Insert(i, scoreboardEntryData);
+        //         scoreAdded = true;
+        //         break;
+        //     }
+        // }
 
-        //Check if the score can be added to the end of the list.
-        if (!scoreAdded && savedScores.highscores.Count < maxScoreboardEntries)
+        if (!isScoreAdded && savedScores.highscores.Count < maxScoreboardEntries)
         {
             savedScores.highscores.Add(scoreboardEntryData);
         }
 
-        //Remove any scores past the limit.
         if (savedScores.highscores.Count > maxScoreboardEntries)
         {
             savedScores.highscores.RemoveRange(maxScoreboardEntries, savedScores.highscores.Count - maxScoreboardEntries);
@@ -107,7 +93,7 @@ public class Scoreboard : MonoBehaviour
         {
             string json = stream.ReadToEnd();
 
-            return JsonUtility.FromJson<ScoreboardSaveData>(json) != null ? JsonUtility.FromJson<ScoreboardSaveData>(json) : new ScoreboardSaveData(); // SOLVED condition ? consequent : alternative 
+            return JsonUtility.FromJson<ScoreboardSaveData>(json) != null ? JsonUtility.FromJson<ScoreboardSaveData>(json) : new ScoreboardSaveData();
         }
     }
 

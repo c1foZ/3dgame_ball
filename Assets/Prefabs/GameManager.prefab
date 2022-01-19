@@ -46,3 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restartDelay: 1
   completeLevelUI: {fileID: 0}
+  failedLevelUI: {fileID: 0}
+  failedLevelUnderGroundUI: {fileID: 0}

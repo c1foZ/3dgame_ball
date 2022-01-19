@@ -9020,9 +9020,17 @@ PrefabInstance:
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 3618570063610731066, guid: 4cd66c2241a5148ceb96755657452d33, type: 3}
+      propertyPath: failedLevelUI
+      value: 
+      objectReference: {fileID: 4627036790861783994}
+    - target: {fileID: 3618570063610731066, guid: 4cd66c2241a5148ceb96755657452d33, type: 3}
       propertyPath: completeLevelUI
       value: 
       objectReference: {fileID: 1318377300}
+    - target: {fileID: 3618570063610731066, guid: 4cd66c2241a5148ceb96755657452d33, type: 3}
+      propertyPath: failedLevelUnderGroundUI
+      value: 
+      objectReference: {fileID: 4627036790861783995}
     - target: {fileID: 3618570063610731067, guid: 4cd66c2241a5148ceb96755657452d33, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -9271,6 +9279,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f85df05e2c8fa42a08b0a5132d28f3aa, type: 3}
+--- !u!1 &4627036790861783994 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2083328663, guid: f85df05e2c8fa42a08b0a5132d28f3aa, type: 3}
+  m_PrefabInstance: {fileID: 4627036790861783993}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4627036790861783995 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 508915757, guid: f85df05e2c8fa42a08b0a5132d28f3aa, type: 3}
+  m_PrefabInstance: {fileID: 4627036790861783993}
+  m_PrefabAsset: {fileID: 0}
 --- !u!54 &4952961012384261891
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16784,7 +16802,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1736830904308668000, guid: daeeec94b93a54eae88f93e0736f776f, type: 3}
       propertyPath: m_Name
-      value: Hide Mouse Cursor
+      value: HideMouseCursor
       objectReference: {fileID: 0}
     - target: {fileID: 1736830904308668006, guid: daeeec94b93a54eae88f93e0736f776f, type: 3}
       propertyPath: m_RootOrder
@@ -16889,7 +16907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7939359550786734230, guid: bad5ad85f72e54571bb683bb3535c691, type: 3}
       propertyPath: m_Name
-      value: Main Camera
+      value: MainCamera
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bad5ad85f72e54571bb683bb3535c691, type: 3}

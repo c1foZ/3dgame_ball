@@ -423,7 +423,7 @@ GameObject:
   - component: {fileID: 189220596}
   - component: {fileID: 189220595}
   m_Layer: 0
-  m_Name: Hide_Cursor
+  m_Name: HideCursor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -639,7 +639,7 @@ GameObject:
   - component: {fileID: 251083852}
   - component: {fileID: 251083851}
   m_Layer: 5
-  m_Name: Canvas_Your_Time
+  m_Name: CanvasYourTime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -817,7 +817,7 @@ GameObject:
   - component: {fileID: 400034635}
   - component: {fileID: 400034634}
   m_Layer: 5
-  m_Name: Next
+  m_Name: TextNext
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1182,7 +1182,7 @@ GameObject:
   - component: {fileID: 563470702}
   - component: {fileID: 563470701}
   m_Layer: 5
-  m_Name: Canvas_Insert_Name
+  m_Name: CanvasInsertName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1815,7 +1815,7 @@ GameObject:
   - component: {fileID: 724188663}
   - component: {fileID: 724188662}
   m_Layer: 5
-  m_Name: Next Button
+  m_Name: NextButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2254,7 +2254,7 @@ GameObject:
   - component: {fileID: 815921892}
   - component: {fileID: 815921891}
   m_Layer: 5
-  m_Name: Next_Button
+  m_Name: NextButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2363,19 +2363,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 872239045}
         m_TargetAssemblyTypeName: Scoreboard, Assembly-CSharp
-        m_MethodName: StoreName
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 872239045}
-        m_TargetAssemblyTypeName: Scoreboard, Assembly-CSharp
-        m_MethodName: AddTestEntry
+        m_MethodName: StoreNameAndScore
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2741,7 +2729,7 @@ GameObject:
   - component: {fileID: 962848397}
   - component: {fileID: 962848396}
   m_Layer: 5
-  m_Name: Text_Next
+  m_Name: TextNext
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4012,7 +4000,7 @@ GameObject:
   - component: {fileID: 1647443418}
   - component: {fileID: 1647443417}
   m_Layer: 5
-  m_Name: Text_Your_Time
+  m_Name: TextYourTime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4146,7 +4134,7 @@ GameObject:
   - component: {fileID: 1648789764}
   - component: {fileID: 1648789765}
   m_Layer: 5
-  m_Name: Text_Area_Name
+  m_Name: TextAreaName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4200,7 +4188,7 @@ GameObject:
   - component: {fileID: 1727624042}
   - component: {fileID: 1727624041}
   m_Layer: 5
-  m_Name: Text_Your_Name
+  m_Name: TextYourName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4471,7 +4459,7 @@ GameObject:
   - component: {fileID: 1817617052}
   - component: {fileID: 1817617051}
   m_Layer: 5
-  m_Name: Input_Name
+  m_Name: InputName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

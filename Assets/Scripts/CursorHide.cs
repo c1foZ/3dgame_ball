@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-
 public class CursorHide : MonoBehaviour
 {
     GameObject lastselect;
@@ -12,7 +9,6 @@ public class CursorHide : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
-
     void Update()
     {
         if (EventSystem.current.currentSelectedGameObject == null)

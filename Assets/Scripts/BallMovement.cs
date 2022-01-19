@@ -5,41 +5,36 @@ public class BallMovement : MonoBehaviour
     public float forwardForce = 2000f;
     public float sidewaysForce = 40f;
     public float jumpForce = 20f;
-    public bool ballIsOnTheGround = true;
-    // Start is called before the first frame update
-
-    // Update is called once per frame
+    private bool ballIsOnTheGround = true;
     void FixedUpdate()
     {
         rb.AddForce(0, 0, forwardForce * Time.deltaTime);
 
-        if (Input.GetKey("w") || Input.GetKey("up"))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             rb.AddForce(0, 0, forwardForce * Time.deltaTime);
         }
-        if (Input.GetKey("d") || Input.GetKey("right"))
-        {
-            rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
-        }
-        if (Input.GetKey("a") || Input.GetKey("left"))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
-        if (ballIsOnTheGround && Input.GetKey("space"))
-        {
-            rb.AddForce(0, jumpForce * Time.deltaTime, 0, ForceMode.VelocityChange);
-            Debug.Log("Jump");
-            ballIsOnTheGround = false;
-        };
-
-        if (Input.GetKey("s") || Input.GetKey("down"))
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
             rb.AddForce(0, 0, -1000 * Time.deltaTime);
         }
-
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        {
+            rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+        }
+        if (ballIsOnTheGround && Input.GetKey(KeyCode.Space))
+        {
+            rb.AddForce(0, jumpForce * Time.deltaTime, 0, ForceMode.VelocityChange);
+            ballIsOnTheGround = false;
+        }
         if (rb.position.y < -1f)
         {
             FindObjectOfType<GameManager>().EndGame();
+            FindObjectOfType<GameManager>().LevelFailedUnderGround();
         }
 
     }
@@ -48,7 +43,6 @@ public class BallMovement : MonoBehaviour
         if (collisionInfo.collider.tag == "Ground")
         {
             ballIsOnTheGround = true;
-            Debug.Log("Is on the Ground");
         }
     }
 }

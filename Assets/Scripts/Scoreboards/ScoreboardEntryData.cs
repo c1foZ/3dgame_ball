@@ -1,7 +1,4 @@
 using System;
-using UnityEngine;
-using TMPro;
-
 
 [Serializable]
 public class ScoreboardEntryData
