@@ -43,9 +43,9 @@ public class StopWatch : MonoBehaviour
             Destroy(gameObject);
         }
         if (
-        Input.GetKey(KeyCode.Escape))
+        Input.GetKey(KeyCode.R))
         {
-            FindObjectOfType<GameManager>().RestartAll();
+            FindObjectOfType<GameManager>().RestartGame();
             Destroy(gameObject);
         }
 

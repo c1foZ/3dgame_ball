@@ -129,10 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 7504812992605870731}
-  forwardForce: 1000
-  sidewaysForce: 40
-  jumpForce: 250
-  ballIsOnTheGround: 1
+  isPaused: 0
 --- !u!114 &7504812992605870733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,3 +144,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 7504812992605870732}
   rb: {fileID: 7504812992605870731}
+  gameManager: {fileID: 0}
+  gUI: {fileID: 0}

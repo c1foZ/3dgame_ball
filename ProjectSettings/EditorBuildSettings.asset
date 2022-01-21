@@ -11,15 +11,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/2.unity
     guid: b1a84921b951748659df25d2d029dd3e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/3.unity
     guid: 295405f81900d4e9cbcce736fbbf80a4
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/4.unity
     guid: f6a30942118db4a37876bcc499544a6f
+  - enabled: 1
+    path: Assets/Scenes/5.unity
+    guid: af682f941ccd64c5482b4e9055a55215
   - enabled: 1
     path: Assets/Scenes/Scoreboard.unity
     guid: 6f662d729fc684e22a5ba4b7a42edb71

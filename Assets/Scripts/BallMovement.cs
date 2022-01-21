@@ -2,10 +2,12 @@ using UnityEngine;
 public class BallMovement : MonoBehaviour
 {
     public Rigidbody rb;
-    public float forwardForce = 2000f;
-    public float sidewaysForce = 40f;
-    public float jumpForce = 20f;
+    private float forwardForce = 1000f;
+    private float backwardForce = -1000f;
+    private float sidewaysForce = 40f;
+    private float jumpForce = 250f;
     private bool ballIsOnTheGround = true;
+    public bool isPaused = false;
     void FixedUpdate()
     {
         rb.AddForce(0, 0, forwardForce * Time.deltaTime);
@@ -20,7 +22,7 @@ public class BallMovement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
-            rb.AddForce(0, 0, -1000 * Time.deltaTime);
+            rb.AddForce(0, 0, backwardForce * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
@@ -34,10 +36,10 @@ public class BallMovement : MonoBehaviour
         if (rb.position.y < -1f)
         {
             FindObjectOfType<GameManager>().EndGame();
-            FindObjectOfType<GameManager>().LevelFailedUnderGround();
+            FindObjectOfType<GUI>().uiLevelFailedUnderGround();
         }
-
     }
+
     private void OnCollisionEnter(Collision collisionInfo)
     {
         if (collisionInfo.collider.tag == "Ground")

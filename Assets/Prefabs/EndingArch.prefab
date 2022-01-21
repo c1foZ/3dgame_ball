@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4098789610841517483}
   - component: {fileID: 6258215384274859900}
   m_Layer: 0
-  m_Name: Ending Arch
+  m_Name: EndingArch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

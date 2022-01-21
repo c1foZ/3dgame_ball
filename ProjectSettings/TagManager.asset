@@ -7,6 +7,8 @@ TagManager:
   - Wall
   - Ground
   - GameMusic
+  - test2
+  - GUI
   layers:
   - Default
   - TransparentFX

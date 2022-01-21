@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -425.00006, y: -245}
+  m_AnchoredPosition: {x: -1058, y: -579}
   m_SizeDelta: {x: -949.9999, y: -510}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &837202946
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 38.95
+  m_fontSize: 72
   m_fontSizeBase: 219.75
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 2560, y: 1440}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
@@ -272,6 +272,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TimerText: {fileID: 837202945}
   RtTimer: {fileID: 837202947}
-  SavedTimer: 0
-  playing: 1
   Timer: 0

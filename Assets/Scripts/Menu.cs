@@ -2,16 +2,22 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
-    public void StartGame()
+    public void btnStartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        FindObjectOfType<GameManager>().StartGame();
     }
-    public void RestartGame()
+    public void btnRestartGame()
     {
-        SceneManager.LoadScene(1);
+        FindObjectOfType<GameManager>().RestartGame();
     }
-    public void QuitGame()
+    public void btnQuitGame()
     {
-        Application.Quit();
+        FindObjectOfType<GameManager>().QuitGame();
     }
+    public void btnResumeGame()
+    {
+        FindObjectOfType<GameManager>().ResumeGame();
+    }
+
+
 }

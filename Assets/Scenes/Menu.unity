@@ -200,13 +200,74 @@ RectTransform:
   - {fileID: 480512041}
   - {fileID: 4375031508782140876}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1001 &388697121
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 340232328968555728, guid: 4cd66c2241a5148ceb96755657452d33, type: 3}
+      propertyPath: gUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618570063610731065, guid: 4cd66c2241a5148ceb96755657452d33, type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618570063610731067, guid: 4cd66c2241a5148ceb96755657452d33, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618570063610731067, guid: 4cd66c2241a5148ceb96755657452d33, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1447.6969
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618570063610731067, guid: 4cd66c2241a5148ceb96755657452d33, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 707.719
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618570063610731067, guid: 4cd66c2241a5148ceb96755657452d33, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 68.43869
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618570063610731067, guid: 4cd66c2241a5148ceb96755657452d33, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618570063610731067, guid: 4cd66c2241a5148ceb96755657452d33, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618570063610731067, guid: 4cd66c2241a5148ceb96755657452d33, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618570063610731067, guid: 4cd66c2241a5148ceb96755657452d33, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618570063610731067, guid: 4cd66c2241a5148ceb96755657452d33, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618570063610731067, guid: 4cd66c2241a5148ceb96755657452d33, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618570063610731067, guid: 4cd66c2241a5148ceb96755657452d33, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4cd66c2241a5148ceb96755657452d33, type: 3}
 --- !u!1 &480512040
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,7 +436,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &741625423
 GameObject:
@@ -419,7 +480,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1148256625
 GameObject:
@@ -486,7 +547,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1577569063
 GameObject:
@@ -570,7 +631,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!222 &4375031508094282313
 CanvasRenderer:
@@ -821,7 +882,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4375031508945425902}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: QuitGame
+        m_MethodName: btnQuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1156,7 +1217,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4375031509893916242}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: btnStartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -1,9 +1,9 @@
 using UnityEngine;
 public class EndTrigger : MonoBehaviour
 {
-    public GameManager gameManager;
+    public GUI gUI;
     void OnTriggerEnter()
     {
-        gameManager.CompleteLevel();
+        gUI.uiCompleteLevel();
     }
 }

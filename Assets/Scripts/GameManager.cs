@@ -1,42 +1,60 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 public class GameManager : MonoBehaviour
 {
+    private GameObject gUI;
     bool gameHasEnded = false;
-    public float restartDelay = 2f;
-    public GameObject completeLevelUI;
-    public GameObject failedLevelUI;
-    public GameObject failedLevelUnderGroundUI;
-    public void CompleteLevel()
+    private float restartDelay = 1f;
+
+    private bool isPaused = false;
+
+    public void StartGame()
     {
-        completeLevelUI.SetActive(true);
-        Destroy(failedLevelUI);
-        Destroy(failedLevelUnderGroundUI);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    public void LevelFailed()
+    public void RestartGame()
     {
-        failedLevelUI.SetActive(true);
-    }
-    public void LevelFailedUnderGround()
-    {
-        failedLevelUnderGroundUI.SetActive(true);
+        SceneManager.LoadScene("1");
     }
     public void EndGame()
     {
         if (gameHasEnded == false)
         {
             gameHasEnded = true;
-            Invoke("Restart", restartDelay);
+            Invoke("RestartRound", restartDelay);
         }
     }
-    void Restart()
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+    public void PauseGame()
+    {
+        isPaused = true;
+        Time.timeScale = 0f;
+        FindObjectOfType<GUI>().uiPauseGame();
+    }
+    public void ResumeGame()
+    {
+        isPaused = false;
+        Time.timeScale = 1;
+        FindObjectOfType<GUI>().uiResumeGame();
+    }
+    void RestartRound()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    public void RestartAll()
+    private void Update()
     {
-        SceneManager.LoadScene("1");
+        if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape) && isPaused == false)
+        {
+            PauseGame();
+        }
+        else if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape) && isPaused == true)
+        {
+            ResumeGame();
+        }
     }
+
 }
 
