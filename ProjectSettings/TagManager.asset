@@ -9,6 +9,7 @@ TagManager:
   - GameMusic
   - test2
   - GUI
+  - StopWatch
   layers:
   - Default
   - TransparentFX

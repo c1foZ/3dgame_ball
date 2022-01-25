@@ -1,14 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
 public class GUI : MonoBehaviour
 {
     public GameObject completeLevelUI;
     public GameObject failedLevelUI;
     public GameObject failedLevelUnderGroundUI;
     public GameObject levelPausedMenuUI;
-    public GameObject test;
+
     public void uiCompleteLevel()
     {
         completeLevelUI.SetActive(true);
@@ -33,5 +30,8 @@ public class GUI : MonoBehaviour
     {
         levelPausedMenuUI.SetActive(false);
     }
+
+
+
 
 }

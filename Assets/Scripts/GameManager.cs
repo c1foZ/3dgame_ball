@@ -40,19 +40,34 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         FindObjectOfType<GUI>().uiResumeGame();
     }
-    void RestartRound()
+    private void RestartRound()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape) && isPaused == false)
+        if ((Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape)) && isPaused == false && SceneManager.GetActiveScene().name != "Menu")
         {
             PauseGame();
         }
-        else if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape) && isPaused == true)
+        else if ((Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape)) && isPaused == true && SceneManager.GetActiveScene().name != "Menu")
         {
             ResumeGame();
+        }
+
+        if (SceneManager.GetActiveScene().name == "Scoreboard")
+        {
+            FindObjectOfType<StopWatch>().StopTime();
+        }
+        if (SceneManager.GetActiveScene().name == "Credits")
+        {
+            Destroy(GameObject.FindWithTag("StopWatch"));
+        }
+        if (
+        Input.GetKey(KeyCode.R))
+        {
+            FindObjectOfType<GameManager>().RestartGame();
+            Destroy(GameObject.FindWithTag("StopWatch"));
         }
     }
 
