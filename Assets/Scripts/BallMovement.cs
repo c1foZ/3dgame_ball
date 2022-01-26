@@ -1,14 +1,17 @@
 using UnityEngine;
 public class BallMovement : MonoBehaviour
 {
-    public Rigidbody rb;
+    private Rigidbody rb;
     private float forwardForce = 1000f;
     private float backwardForce = -1000f;
     private float sidewaysForce = 40f;
     private float jumpForce = 250f;
     private bool ballIsOnTheGround = true;
-    public bool isPaused = false;
-    void FixedUpdate()
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+    private void FixedUpdate()
     {
         rb.AddForce(0, 0, forwardForce * Time.deltaTime);
 
@@ -39,7 +42,6 @@ public class BallMovement : MonoBehaviour
             FindObjectOfType<GUI>().uiLevelFailedUnderGround();
         }
     }
-
     private void OnCollisionEnter(Collision collisionInfo)
     {
         if (collisionInfo.collider.tag == "Ground")

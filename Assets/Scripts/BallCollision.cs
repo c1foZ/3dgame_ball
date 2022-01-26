@@ -1,9 +1,15 @@
 using UnityEngine;
 public class BallCollision : MonoBehaviour
 {
-    public BallMovement movement;
-    public Rigidbody rb;
-    void OnCollisionEnter(Collision collisionInfo)
+    private BallMovement movement;
+    private Rigidbody rb;
+    private GUI gUI;
+    private void Awake()
+    {
+        movement = GetComponent<BallMovement>();
+        rb = GetComponent<Rigidbody>();
+    }
+    private void OnCollisionEnter(Collision collisionInfo)
     {
         if (collisionInfo.collider.tag == "Wall")
         {

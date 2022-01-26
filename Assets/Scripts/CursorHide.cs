@@ -3,13 +3,13 @@ using UnityEngine.EventSystems;
 public class CursorHide : MonoBehaviour
 {
     GameObject lastselect;
-    void Start()
+    private void Start()
     {
         lastselect = new GameObject();
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
-    void Update()
+    private void Update()
     {
         if (EventSystem.current.currentSelectedGameObject == null)
         {

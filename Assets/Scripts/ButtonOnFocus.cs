@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class ButtonOnFocus : MonoBehaviour
 {
-    public GameObject selectButton;
-    public void Update()
+    [SerializeField] private GameObject selectButton;
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape))
         {

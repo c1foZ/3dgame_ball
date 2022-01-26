@@ -1,20 +1,19 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
-    public void btnStartGame()
+    private void btnStartGame()
     {
         FindObjectOfType<GameManager>().StartGame();
     }
-    public void btnRestartGame()
+    private void btnRestartGame()
     {
         FindObjectOfType<GameManager>().RestartGame();
     }
-    public void btnQuitGame()
+    private void btnQuitGame()
     {
         FindObjectOfType<GameManager>().QuitGame();
     }
-    public void btnResumeGame()
+    private void btnResumeGame()
     {
         FindObjectOfType<GameManager>().ResumeGame();
     }

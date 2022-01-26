@@ -5,8 +5,8 @@ using System;
 public class StopWatchUI : MonoBehaviour
 {
     [Header("StopWatch Canvas")]
-    public GameObject stopWatchUI;
-    public TextMeshProUGUI TimerText;
+    [SerializeField] private GameObject stopWatchUI;
+    [SerializeField] private TextMeshProUGUI TimerText;
 
     public void uiStopWatch()
     {

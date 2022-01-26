@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &837202947
 RectTransform:
   m_ObjectHideFlags: 0
@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 2572441758303832478}
   m_Layer: 5
   m_Name: StopWatch
-  m_TagString: Untagged
+  m_TagString: StopWatch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -270,6 +270,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46d5c1eb5e7c04b5c8582f1f67d0217b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimerText: {fileID: 837202945}
-  RtTimer: {fileID: 837202947}
   Timer: 0

@@ -1,10 +1,15 @@
 using UnityEngine;
 public class GUI : MonoBehaviour
 {
-    public GameObject completeLevelUI;
-    public GameObject failedLevelUI;
-    public GameObject failedLevelUnderGroundUI;
-    public GameObject levelPausedMenuUI;
+    [Header("Level Complete")]
+    [SerializeField] private GameObject completeLevelUI;
+
+    [Header("Level Failed")]
+    [SerializeField] private GameObject failedLevelUI;
+    [SerializeField] private GameObject failedLevelUnderGroundUI;
+
+    [Header("Level Paused")]
+    [SerializeField] private GameObject levelPausedMenuUI;
 
     public void uiCompleteLevel()
     {

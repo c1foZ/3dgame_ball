@@ -10,6 +10,7 @@ TagManager:
   - test2
   - GUI
   - StopWatch
+  - GameManager
   layers:
   - Default
   - TransparentFX

@@ -3,7 +3,14 @@ using UnityEngine;
 public class StopWatch : MonoBehaviour
 {
     static StopWatch timer = null;
-    public float Timer;
+    private float _timer;
+    public float Timer
+    {
+        get
+        {
+            return _timer;
+        }
+    }
     private bool playing = true;
     private void Start()
     {
@@ -22,7 +29,7 @@ public class StopWatch : MonoBehaviour
     {
         if (playing)
         {
-            Timer += Time.deltaTime;
+            _timer += Time.deltaTime;
             FindObjectOfType<StopWatchUI>().uiStopWatch();
         }
     }

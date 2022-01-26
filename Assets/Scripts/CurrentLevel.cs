@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class CurrentLevel : MonoBehaviour
 {
-    public Text levelNumber;
+    [SerializeField] private Text levelNumber;
     void Awake()
     {
         levelNumber.text = SceneManager.GetActiveScene().name;

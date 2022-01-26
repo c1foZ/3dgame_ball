@@ -1,9 +1,13 @@
 using UnityEngine;
 public class FollowBall : MonoBehaviour
 {
-    public Transform ball;
+    private Transform ball;
     private Vector3 offset;
-    void FixedUpdate()
+    private void Awake()
+    {
+        ball = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+    }
+    private void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.Q))
         {

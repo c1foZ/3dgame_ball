@@ -2,12 +2,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
-    private GameObject gUI;
-    bool gameHasEnded = false;
+    private bool gameHasEnded = false;
     private float restartDelay = 1f;
-
     private bool isPaused = false;
-
     public void StartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -28,7 +25,7 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
-    public void PauseGame()
+    private void PauseGame()
     {
         isPaused = true;
         Time.timeScale = 0f;

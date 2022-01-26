@@ -4,37 +4,42 @@ public class BackgroundMusic : MonoBehaviour
 {
     static BackgroundMusic instance;
 
-    public AudioClip[] MusicClips;
-    public AudioSource Audio;
-    public bool isOdd = true;
+    [SerializeField] private AudioClip[] MusicClips;
+    [SerializeField] private AudioSource Audio;
 
-    void Awake()
+    private void Awake()
     {
         if (instance == null) { instance = this; }
         else { Destroy(gameObject); }
-
         DontDestroyOnLoad(gameObject);
-        Audio.Play();
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
-    private void Start()
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Audio.clip = MusicClips[0];
-        Audio.Play();
-    }
-    private void Update()
-    {
-        if (SceneManager.GetActiveScene().name == "1" && isOdd == true)
+        switch (scene.name)
         {
-            Audio.clip = MusicClips[1];
-            Audio.Play();
-            isOdd = false;
+            case "Menu":
+                Audio.clip = MusicClips[0];
+                Audio.Play();
+                break;
+            case "1":
+                if (Audio.clip != MusicClips[1])
+                {
+                    Audio.clip = MusicClips[1];
+                    Audio.Play();
+                }
+                break;
+            case "5":
+                if (Audio.clip != MusicClips[2])
+                {
+                    Audio.clip = MusicClips[2];
+                    Audio.Play();
+                }
+                break;
+            default:
+                Audio.clip = MusicClips[3];
+                break;
         }
+    }
 
-        if (SceneManager.GetActiveScene().name == "5" && isOdd == false)
-        {
-            Audio.clip = MusicClips[2];
-            Audio.Play();
-            isOdd = true;
-        }
-    }
 }
