@@ -5,6 +5,23 @@ public class GameManager : MonoBehaviour
     private bool gameHasEnded = false;
     private float restartDelay = 1f;
     private bool isPaused = false;
+    private static GameManager _instance;
+    public static GameManager Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                Debug.Log("Nope");
+            }
+
+            return _instance;
+        }
+    }
+    private void Awake()
+    {
+        _instance = this;
+    }
     public void StartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -43,11 +60,11 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape)) && isPaused == false && SceneManager.GetActiveScene().name != "Menu")
+        if ((Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape)) && isPaused == false && SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "Scoreboard" && SceneManager.GetActiveScene().name != "Credits")
         {
             PauseGame();
         }
-        else if ((Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape)) && isPaused == true && SceneManager.GetActiveScene().name != "Menu")
+        else if ((Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape)) && isPaused == true && SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "Scoreboard" && SceneManager.GetActiveScene().name != "Credits")
         {
             ResumeGame();
         }
@@ -61,7 +78,7 @@ public class GameManager : MonoBehaviour
             Destroy(GameObject.FindWithTag("StopWatch"));
         }
         if (
-        Input.GetKey(KeyCode.R))
+        Input.GetKey(KeyCode.R) && (SceneManager.GetActiveScene().name != "Scoreboard"))
         {
             FindObjectOfType<GameManager>().RestartGame();
             Destroy(GameObject.FindWithTag("StopWatch"));

@@ -8,6 +8,8 @@ public class StopWatchUI : MonoBehaviour
     [SerializeField] private GameObject stopWatchUI;
     [SerializeField] private TextMeshProUGUI TimerText;
 
+    public StopWatch SW { get; private set; }
+
     public void uiStopWatch()
     {
         TimeSpan time = TimeSpan.FromSeconds(FindObjectOfType<StopWatch>().Timer);

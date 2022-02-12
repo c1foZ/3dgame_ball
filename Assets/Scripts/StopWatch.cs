@@ -3,15 +3,9 @@ using UnityEngine;
 public class StopWatch : MonoBehaviour
 {
     static StopWatch timer = null;
-    private float _timer;
-    public float Timer
-    {
-        get
-        {
-            return _timer;
-        }
-    }
+    public float Timer { get; private set; }
     private bool playing = true;
+    public StopWatchUI SWUI { get; private set; }
     private void Start()
     {
 
@@ -29,7 +23,7 @@ public class StopWatch : MonoBehaviour
     {
         if (playing)
         {
-            _timer += Time.deltaTime;
+            Timer += Time.deltaTime;
             FindObjectOfType<StopWatchUI>().uiStopWatch();
         }
     }

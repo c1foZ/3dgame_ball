@@ -21,11 +21,13 @@ public class GUI : MonoBehaviour
     {
         failedLevelUI.SetActive(true);
         Destroy(failedLevelUnderGroundUI);
+        Destroy(completeLevelUI);
     }
     public void uiLevelFailedUnderGround()
     {
         failedLevelUnderGroundUI.SetActive(true);
         Destroy(failedLevelUI);
+        Destroy(completeLevelUI);
     }
     public void uiPauseGame()
     {
