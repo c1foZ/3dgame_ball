@@ -1,11 +1,11 @@
 .vscode
 UserSettings
 Assembly-CSharp.csproj
-bestgameever.sln
+*.sln
+*.json
 .DS_Store
 Library/
 Temp/
 obj/
-Assets/fantasy-frost-environment
 Assets/TextMesh Pro
 Logs/
