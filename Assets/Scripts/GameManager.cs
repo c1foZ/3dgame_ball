@@ -58,6 +58,11 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+        Destroy(GameObject.FindWithTag("StopWatch"));
+    }
     private void Update()
     {
         if ((Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape)) && isPaused == false && SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "Scoreboard" && SceneManager.GetActiveScene().name != "Credits")
@@ -71,11 +76,11 @@ public class GameManager : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "Scoreboard")
         {
-            FindObjectOfType<StopWatch>().StopTime();
-        }
-        if (SceneManager.GetActiveScene().name == "Credits")
-        {
-            Destroy(GameObject.FindWithTag("StopWatch"));
+            StopWatch stopwatch = FindObjectOfType<StopWatch>();
+            if (stopwatch != null)
+            {
+                stopwatch.StopTime();
+            }
         }
         if (
         Input.GetKey(KeyCode.R) && (SceneManager.GetActiveScene().name != "Scoreboard"))

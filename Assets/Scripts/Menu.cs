@@ -18,6 +18,11 @@ public class Menu : MonoBehaviour
     {
         GameManager.Instance.ResumeGame();
     }
+    private void btnBackToMenu()
+    {
+        GameManager.Instance.BackToMenu();
+    }
+
 
 
 }

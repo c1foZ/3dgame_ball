@@ -77,6 +77,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4841390939663122654}
     m_Modifications:
+    - target: {fileID: 328395358, guid: f85df05e2c8fa42a08b0a5132d28f3aa, type: 3}
+      propertyPath: m_text
+      value: OVER
+      objectReference: {fileID: 0}
+    - target: {fileID: 340360116, guid: f85df05e2c8fa42a08b0a5132d28f3aa, type: 3}
+      propertyPath: m_text
+      value: GAME
+      objectReference: {fileID: 0}
     - target: {fileID: 508915757, guid: f85df05e2c8fa42a08b0a5132d28f3aa, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -312,6 +320,14 @@ PrefabInstance:
     - target: {fileID: 2769738908963562125, guid: f85df05e2c8fa42a08b0a5132d28f3aa, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3101666232074040884, guid: f85df05e2c8fa42a08b0a5132d28f3aa, type: 3}
+      propertyPath: m_text
+      value: YOU
+      objectReference: {fileID: 0}
+    - target: {fileID: 3101666232743809247, guid: f85df05e2c8fa42a08b0a5132d28f3aa, type: 3}
+      propertyPath: m_text
+      value: FELL
       objectReference: {fileID: 0}
     - target: {fileID: 4627036790214649120, guid: f85df05e2c8fa42a08b0a5132d28f3aa, type: 3}
       propertyPath: m_Pivot.x

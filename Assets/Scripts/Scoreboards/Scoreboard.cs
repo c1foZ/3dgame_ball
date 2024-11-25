@@ -43,15 +43,6 @@ public class Scoreboard : MonoBehaviour
         {
             savedScores.highscores.Insert(index, scoreboardEntryData);
         }
-        // for (int i = 0; i < savedScores.highscores.Count; i++)
-        // {
-        //     if (theScore < savedScores.highscores[i].entryScore)
-        //     {
-        //         savedScores.highscores.Insert(i, scoreboardEntryData);
-        //         scoreAdded = true;
-        //         break;
-        //     }
-        // }
 
         if (!isScoreAdded && savedScores.highscores.Count < maxScoreboardEntries)
         {
