@@ -10,17 +10,35 @@ public class Scoreboard : MonoBehaviour
 
     public GameObject inputField;
 
-    private string SavePath => "./highscores.json";
+    private string SavePath => Path.Combine(Application.persistentDataPath, "highscores.json");
 
     private void Start()
     {
-
-        ScoreboardSaveData savedScores = GetSavedScores();
-
-        UpdateUI(savedScores);
-
-        SaveScores(savedScores);
+        if (HasPermissionToSave())
+        {
+            ScoreboardSaveData savedScores = GetSavedScores();
+            UpdateUI(savedScores);
+            SaveScores(savedScores);
+        }
+        else
+        {
+            Debug.LogWarning("Permission to save file denied.");
+        }
     }
+
+    private bool HasPermissionToSave()
+    {
+        if (Directory.Exists(Application.persistentDataPath))
+        {
+            return true;
+        }
+        else
+        {
+            Debug.LogWarning("Save path is not accessible.");
+            return false;
+        }
+    }
+
     public void StoreNameAndScore()
     {
         var userScore = FindObjectOfType<StopWatch>().Timer;
@@ -29,7 +47,6 @@ public class Scoreboard : MonoBehaviour
             entryName = inputField.GetComponent<TextMeshProUGUI>().text,
             entryScore = userScore
         });
-
     }
 
     public void AddEntry(ScoreboardEntryData scoreboardEntryData)
@@ -83,7 +100,6 @@ public class Scoreboard : MonoBehaviour
         using (StreamReader stream = new StreamReader(SavePath))
         {
             string json = stream.ReadToEnd();
-
             return JsonUtility.FromJson<ScoreboardSaveData>(json) != null ? JsonUtility.FromJson<ScoreboardSaveData>(json) : new ScoreboardSaveData();
         }
     }
