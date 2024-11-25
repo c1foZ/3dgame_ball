@@ -32,7 +32,7 @@ Play Guľôčka on [itch.io](https://cifoz.itch.io/gulocka).
 
 ## **Screenshot**
 
-![Game Screenshot](images/gulicka.gif)
+![Game Screenshot](images/gulocka.gif)
 
 ---
 
